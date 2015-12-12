@@ -9,6 +9,9 @@ Router.map(function() {
   this.route('users', function() {
     this.route('user', { path: '/:user_id' });
   });
+  this.route('closets', function() {
+    this.route('closet', { path: '/:closet_id' });
+  });
 });
 
 export default Router;

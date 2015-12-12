@@ -1,0 +1,8 @@
+Closets:
+<ul>
+  {{#each model as |closet|}}
+  <li class="closets">
+     {{ link-to closet.name "closets.closet" closet }}
+  </li>
+  {{/each}}
+</ul>
