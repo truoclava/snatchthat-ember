@@ -2,5 +2,6 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   name: DS.attr('string'),
-  // closets: DS.hasMany('closet', { async: true }),
+  boardId: DS.attr('number'),
+  userId: DS.attr('number')
 });
