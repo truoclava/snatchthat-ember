@@ -10,7 +10,7 @@ Router.map(function() {
     this.route('user', { path: '/:user_id' });
   });
   this.route('closets', function() {
-    this.route('closet', { path: '/:user_id' });
+    this.route('closet', { path: '/:closet_id' });
   });
 });
 

@@ -1,9 +1,11 @@
-{{outlet}}
+
 Closets:
 <ul>
   {{#each model as |closet|}}
-  <li class="users">
-     {{ link-to closet.name "users.user" closet }}
+  <li>
+     {{ link-to closet.name "closets.closet" closet }}
   </li>
   {{/each}}
 </ul>
+
+{{outlet}}
