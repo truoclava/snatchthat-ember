@@ -3,7 +3,7 @@ Closets:
 <ul>
   {{#each model as |closet|}}
   <li class="users">
-     {{ link-to user.username "users.user" user }}
+     {{ link-to closet.name "users.user" closet }}
   </li>
   {{/each}}
 </ul>
