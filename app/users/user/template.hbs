@@ -2,9 +2,24 @@
 
 this is individual user
 <p>
+<li>
+{{model.id}}
+</li>
+<li>
 {{model.username}}
+</li>
+<li>
+  {{model.email}}
+</li>
 </p>
 
+Closets:
+<ul>
+  {{#each model.closets as |closet|}}
+  <li>
+     {{ link-to closet.name "closets.closet" closet }}
+  </li>
+  {{/each}}
+</ul>
 
-{{#link-to 'closets' model.id}}Closets{{/link-to}}
 {{outlet}}

@@ -2,8 +2,14 @@
 
 This is an individual closet page<br>
 <label>Closet name:</label>
-<li>{{model.name}}</li>
+<p>{{model.name}}</p>
 
-
-{{#link-to 'items'}}items{{/link-to}}
+Items:
+<ul>
+  {{#each model.items as |item|}}
+  <li>
+     {{ link-to item.name "items.item" item }}
+  </li>
+  {{/each}}
+</ul>
 {{outlet}}
