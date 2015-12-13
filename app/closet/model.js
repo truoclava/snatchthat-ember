@@ -5,5 +5,5 @@ export default DS.Model.extend({
   boardId: DS.attr('number'),
   userId: DS.attr('number'),
   user: DS.belongsTo('user', { async: true }),
-  closetItems: DS.hasMany('closetItem', { async: true })
+  items: DS.hasMany('item', { async: true })
 });
