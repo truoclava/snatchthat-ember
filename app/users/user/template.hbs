@@ -1,11 +1,10 @@
-Users:
-<ul>
-  {{#each model as |user|}}
-  <li class="users">
-     {{ link-to user.username "users.user" user }}
-  </li>
-  {{/each}}
-</ul>
 
 
+this is individual user
+<p>
+{{model.username}}
+</p>
+
+
+{{#link-to 'closets' model}}Closets{{/link-to}}
 {{outlet}}
