@@ -24,7 +24,7 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self'",
       'font-src': "'self'",
-      'connect-src': "'self' http://localhost:3000",
+      'connect-src': "*",
       'img-src': "'self'",
       'style-src': "'self'",
       'media-src': "'self'"
@@ -41,6 +41,11 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+
+    ENV['ember-simple-auth'] = {
+      routeAfterAuthentication: 'dashboard',
+      routeIfAlreadyAuthenticated: 'dashboard'
+    }    
   }
 
   if (environment === 'production') {
