@@ -43,6 +43,7 @@ module.exports = function(environment) {
     ENV.APP.rootElement = '#ember-testing';
 
     ENV['ember-simple-auth'] = {
+      // authenticationRoute: 'login'
       routeAfterAuthentication: 'dashboard',
       routeIfAlreadyAuthenticated: 'dashboard'
     }

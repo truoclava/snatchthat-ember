@@ -5,9 +5,6 @@ const { service } = Ember.inject;
 
 export default Ember.Route.extend(AuthenticatedRouteMixin, {
   session: service('session'),
-  model() {
-    return this.store.findAll('closet');
-  },
   actions: {
     logout() {
       this.get('session').invalidate();
