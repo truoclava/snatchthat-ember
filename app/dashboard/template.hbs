@@ -1,5 +1,7 @@
 <h2>Dashboard</h2>
 
-<p>Peter Parker is Spider-Man</p>
+{{#each items as |item|}}
+  <li>{{item.name}}</li>
+{{/each}}
 
 <a href="#" {{action 'logout'}}>Logout</a>

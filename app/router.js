@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.resource('users', function() {
     this.route('user', { path: '/:user_id'}, function() {
+     this.route('dashboard', { path: '/'}, function () {
       this.resource('closets', function() {
         this.route('closet', { path: '/:closet_id'}, function() {
           this.resource('items', function() {
@@ -15,10 +16,11 @@ Router.map(function() {
           });
         });
       });
+     });
     });
   });
   this.route('login');
-  this.route('dashboard');
+
 });
 
 export default Router;
