@@ -7,5 +7,5 @@ export default DS.Model.extend({
   sourceType: DS.attr('string'),
   image_url: DS.attr('string'),
   closetId: DS.attr('number'),
-  closet: DS.belongsTo('closet', { async: true }),
+  closets: DS.hasMany('closet', { async: true })
 });
