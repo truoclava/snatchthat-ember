@@ -1,14 +1,16 @@
 <h2>Dashboard</h2>
 
+Closets:
 {{#each model.closets as |closet|}}
   <li>{{closet.name}}</li>
 {{/each}}
 
-{{#each items as |item|}}
+Items:
+{{#each model.items as |item|}}
   <li>{{item.name}}</li>
 {{/each}}
 
-<a href="#" {{action 'logout'}}>Logout</a>
+{{!-- <a href="#" {{action 'logout'}}>Logout</a> --}}
 
 {{!-- Items:
 <ul>
