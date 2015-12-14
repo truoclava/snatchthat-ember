@@ -3,6 +3,13 @@
 This is an individual closet page<br>
 <label>Closet name:</label>
 <p>{{model.name}}</p>
+<p>Delete the closet</p>
+
+<button id="delete" value={{model.id}} {{action "delete" model}}>Delete</button>
+<!-- 
+
+{{ link-to "Search" "closets.hid" model}} -->
+
 
 Items:
 <ul>

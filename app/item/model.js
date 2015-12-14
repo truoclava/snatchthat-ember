@@ -6,5 +6,5 @@ export default DS.Model.extend({
   sourceId: DS.attr('string'),
   sourceType: DS.attr('string'),
   image_url: DS.attr('string'),
-  closet: DS.belongsTo('closet', { async: true }),
+  users: DS.hasMany('closet', { async: true })
 });
