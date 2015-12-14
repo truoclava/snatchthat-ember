@@ -1,8 +1,11 @@
-<h2 id="title">Snatchthat</h2>
-<nav class="navbar navbar-inverse">
+
+<nav class="navbar navbar-default navbar-static-top">
   <div class="container-fluid">
     <div class="navbar-header">
-    {{#link-to 'index' class="navbar-brand"}}Nav-bar here?{{/link-to}}
+    {{#link-to 'index' class="navbar-brand"}}Snatch That{{/link-to}}
+    </div>
+    <div class="nav navbar-nav navbar-right">
+      <a {{action 'invalidateSession'}} class="navbar-brand">Logout</a>
     </div>
   </div>
 </nav>
@@ -10,13 +13,16 @@
 {{#if session.isAuthenticated}}
   <div class="well col-sm-6 col-sm-offset-4">
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-        <ul class="nav navbar-nav">
-          <a {{action 'invalidateSession'}}>Logout</a>
-          <li class="active" id="users">{{#link-to 'users'}}users{{/link-to}}</li>
+        <ul class="nav navbar-nav navbar-right">
+
         </ul>
+          <li class="active" id="users">{{#link-to 'users'}}users{{/link-to}}</li>
       </div>
     </div>
 {{else}}
-  {{#link-to 'login'}}Login{{/link-to}}
+  {{!-- <nav class="nav navbar-nav navbar-right">
+    {{#link-to 'login'}}Login{{/link-to}}
+  </nav> --}}
+
   {{outlet}}
 {{/if}}
