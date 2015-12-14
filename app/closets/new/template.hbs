@@ -1,0 +1,20 @@
+This is my new object {{model.name}}
+
+<form {{action 'save' model on="submit"}}>
+  <li>
+  <label>Name:</label>
+  {{input value = model.name}}
+  </li>
+  <li>
+  <label>boardId:</label>
+  {{input value = model.boardId}}
+  </li>
+  <li>
+  <label>userId:</label>
+  {{input value = model.userId}}
+  </li>
+
+  <input type="submit" value="Create a closet">
+</form>
+
+{{outlet}}
