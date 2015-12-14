@@ -6,16 +6,16 @@ export default DS.Model.extend({
   trackable_type: DS.attr('string'),
   trackable_name: DS.attr('string'),
   trackable_source: DS.attr('string'),
-  userId: DS.attr('number'),
-  user: DS.belongsTo('user', { async: true}),
-
-
+  user: DS.belongsTo('user', { async: true }),
   title: Ember.computed("activity", function(){
     var action = this.get('action')
     var type = this.get('trackable_type')
     var trackedName = this.get('trackable_name')
-    var userID = this.get('userId')
-     debugger;
+    var userID = this.get('user.id')
+    var user = this.get('user')
+    var userName = this.get('user.username')
+
+    // debugger;
     var phrase = ""
       if(action === "create" && type === "User"){
         phrase = "Followed" + " " + trackedName
