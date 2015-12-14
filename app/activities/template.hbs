@@ -1,0 +1,10 @@
+Activities:
+<ul>
+  {{#each model as |activity|}}
+  <li class="activities">
+     {{ activity.action }}
+  </li>
+  {{/each}}
+</ul>
+
+{{outlet}}
