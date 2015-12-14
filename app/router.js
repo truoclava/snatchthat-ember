@@ -19,6 +19,12 @@ Router.map(function() {
     });
   });
   this.route('activities');
+
+  this.route('closets', function() {});
+
+  this.route('items', function() {
+    this.route('hidesearches');
+  });
 });
 
 export default Router;
