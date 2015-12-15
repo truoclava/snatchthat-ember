@@ -1,0 +1,9 @@
+<br>This is my Amazon search
+
+<form {{action 'search' model on="submit"}}>
+  {{input value=model.keyword}}
+    {{input value=model.sourceType placeholder='Amazon'}}
+  <input type="submit" value="Search">
+</form>
+
+{{outlet}}

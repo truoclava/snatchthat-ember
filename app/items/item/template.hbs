@@ -1,4 +1,14 @@
+<br><strong>{{model.name}}</strong>
+<br><img src="{{model.image_url}}" />
 
-This is an individual item page<br>
-<label>Item name:</label>
-<li>{{model.name}}</li>
+<br>{{model.name}} in:
+
+<ul>
+  {{#each model.closets as |closet|}}
+     <li>
+     {{#link-to 'closets.closet' closet}}{{closet.name}}{{/link-to}}
+   </li>
+  {{/each}}
+</ul>
+
+{{outlet}}

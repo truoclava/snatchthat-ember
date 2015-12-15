@@ -1,10 +1,6 @@
+<strong>{{model.name}}</strong>
 
-
-This is an individual closet page<br>
-<label>Closet name:</label>
-<p>{{model.name}}</p>
-
-Items:
+<br>Items in {{model.name}}:
 <ul>
   {{#each model.items as |item|}}
   <li>
@@ -12,4 +8,5 @@ Items:
   </li>
   {{/each}}
 </ul>
+
 {{outlet}}

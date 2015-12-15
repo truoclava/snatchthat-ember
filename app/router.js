@@ -6,18 +6,21 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('users', function() {
-    this.route('user', { path: '/:user_id'}, function() {
-      this.resource('closets', function() {
-        this.route('closet', { path: '/:closet_id'}, function() {
-          this.resource('items', function() {
-            this.route('item', { path: '/:item_id'});
-          });
-        });
-      });
-    });
+  this.route('users', function() {
+    this.route('user', { path: '/:user_id'});
+  });
+  this.route('closets', function() {
+    this.route('closet', { path: '/:closet_id'});
+  });
+  this.route('items', function() {
+    this.route('item', { path: '/:item_id'});
   });
   this.route('activities');
+  this.route('searches', function() {
+    this.route('search');
+    this.route('show');
+  });
 });
+
 
 export default Router;
