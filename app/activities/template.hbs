@@ -1,9 +1,14 @@
 Activities:
+
 <ul>
   {{#each model as |activity|}}
+  <p>
   <li class="activities">
-     {{ activity.action }}
+
+    {{activity.user.username}} {{activity.title}}
+
   </li>
+  </p>
   {{/each}}
 </ul>
 

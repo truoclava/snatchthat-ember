@@ -5,10 +5,13 @@ User Show Page:
 </p>
 
 Closets:
-{{#each model.closets as |closet|}}
-<li class="closet">
-   {{link-to closet.name "closets.closet" closet}}
-</li>
-{{/each}}
+<ul>
+  {{#each model.closets as |closet|}}
+  <li>
+     {{ link-to closet.name "closets.closet" closet }}
+  </li>
+  {{/each}}
+</ul>
+{{ link-to "Create a closet" "closets.new" model}}
 
 {{outlet}}
